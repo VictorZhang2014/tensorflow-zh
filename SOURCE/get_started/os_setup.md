@@ -30,7 +30,7 @@ $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu
 
 # Mac OS X, CPU only:
 $ sudo easy_install --upgrade six
-$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl
+$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.5.0rc1-py2-none-any.whl
 ```
 
 如果是 Python3 :
