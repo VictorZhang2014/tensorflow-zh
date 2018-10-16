@@ -219,14 +219,14 @@ input1 = tf.constant(3.0)
 input2 = tf.constant(2.0)
 input3 = tf.constant(5.0)
 intermed = tf.add(input2, input3)
-mul = tf.mul(input1, intermed)
+mul = tf.multiply(input1, intermed)
 
 with tf.Session() as sess:
   result = sess.run([mul, intermed])
   print result
 
 # 输出:
-# [array([ 21.], dtype=float32), array([ 7.], dtype=float32)]
+# [21.0, 7.0]
 ```
 
 需要获取的多个 tensor 值，在 op 的一次运行中一起获得（而不是逐个去获取 tensor）。
@@ -244,7 +244,7 @@ feed 只在调用它的方法内有效, 方法结束, feed 就会消失. 最常�
 
 input1 = tf.placeholder(tf.float32)
 input2 = tf.placeholder(tf.float32)
-output = tf.mul(input1, input2)
+output = tf.multiply(input1, input2)
 
 with tf.Session() as sess:
   print sess.run([output], feed_dict={input1:[7.], input2:[2.]})
